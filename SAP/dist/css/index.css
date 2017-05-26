@@ -1,0 +1,78 @@
+.box {
+  width: 100%;
+  background-color: #ffffff;
+}
+.box .headBar {
+  width: 100%;
+  background-color: #363636;
+}
+.box .headBar .HWrap {
+  height: 37px;
+}
+.box .headBar .HWrap .logo {
+  float: left;
+  width: 108px;
+  height: 100%;
+  margin-left: -32px;
+}
+.box .headBar .HWrap .logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../images/logo.png) no-repeat center;
+  background-size: contain;
+}
+.box .headBar .HWrap .login {
+  height: 100%;
+  float: right;
+  line-height: 37px;
+  margin-right: -32px;
+}
+.box .headBar .HWrap .login a {
+  padding: 10px;
+}
+.box .headBar .HWrap .login span {
+  color: white;
+}
+.box .advert {
+  width: 100%;
+  height: 550px;
+  background: url(../images/bgImg.png) no-repeat top left;
+}
+.box .advert .slogan {
+  border: 3px solid white;
+  padding: 22px 26px;
+  margin: 230px 18px 0 18px;
+  color: white;
+  font-weight: 700;
+  font-size: 44px;
+}
+.box .main {
+  background-color: #fbfbfb;
+  padding-top: 80px;
+}
+.box .main .select h4 {
+  margin-bottom: 10px;
+}
+.box .main .select .options {
+  padding: 30px 0;
+}
+.box .main .select .options span {
+  width: 400px;
+  height: 50px;
+  display: inline-block;
+  background-color: #60afed;
+  text-align: center;
+  line-height: 50px;
+  color: #ffffff;
+  margin: 10px 48px;
+  font-weight: 700;
+  font-size: 16px;
+  position: relative;
+}
+.box .main .select .options span .icon {
+  position: absolute;
+  top: 50%;
+  left: 66px;
+  margin-top: -8px;
+}
