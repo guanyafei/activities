@@ -36,16 +36,9 @@
 }
 .box .advert {
   width: 100%;
-  height: 550px;
-  background: url(../images/bgImg.png) no-repeat top left;
-}
-.box .advert .slogan {
-  border: 3px solid white;
-  padding: 22px 26px;
-  margin: 230px 18px 0 18px;
-  color: white;
-  font-weight: 700;
-  font-size: 44px;
+  height: 386px;
+  background: url(../images/banner.png) no-repeat top left;
+  background-size: cover;
 }
 .box .main {
   background-color: #fbfbfb;
@@ -67,7 +60,8 @@
   color: #ffffff;
   margin: 10px 48px;
   font-weight: 700;
-  font-size: 16px;
+  font-family: "兰亭黑";
+  font-size: 14px;
   position: relative;
 }
 .box .main .select .options span .icon {
@@ -75,4 +69,168 @@
   top: 50%;
   left: 66px;
   margin-top: -8px;
+}
+.box .main .users {
+  padding: 40px 0;
+  background-color: #ffffff;
+}
+.box .main .users .companies ul {
+  margin: 34px 0;
+}
+.box .main .users .companies ul li {
+  float: left;
+  width: 460px;
+  padding-left: 40px;
+  margin: 16px 0;
+}
+.box .main .users .companies ul li .ULogo {
+  text-align: center;
+  width: 20%;
+  float: left;
+}
+.box .main .users .companies ul li .UEffect {
+  width: 70%;
+  float: right;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+.box .main .users .carousel .swiper-container01 {
+  overflow: hidden;
+  position: relative;
+}
+.box .main .users .carousel .swiper-container01 .swiper-wrapper .swiper-slide {
+  position: relative;
+}
+.box .main .users .carousel .swiper-container01 .swiper-wrapper .swiper-slide span {
+  color: #626262;
+  display: inline-block;
+  padding: 16px 0;
+  font-family: "微软雅黑";
+  font-size: 12px;
+}
+.box .main .users .carousel .swiper-container01 .swiper-wrapper .swiper-slide .playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -46px;
+  margin-left: -31px;
+}
+.box .main .users .carousel .swiper-container01 .swiper-button-prev,
+.box .main .users .carousel .swiper-container01 .swiper-button-next {
+  margin-top: -52px;
+}
+.box .main .tools {
+  padding: 40px 0;
+}
+.box .main .tools h4 {
+  margin-bottom: 56px;
+}
+.box .main .tools .swiper-container02,
+.box .main .tools .swiper-container03 {
+  overflow: hidden;
+  position: relative;
+}
+.box .main .tools .swiper-container02 .swiper-wrapper p:first-child,
+.box .main .tools .swiper-container03 .swiper-wrapper p:first-child {
+  color: #60afed;
+  font-family: "微软雅黑";
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.box .main .tools .swiper-container02 .swiper-wrapper p:last-child,
+.box .main .tools .swiper-container03 .swiper-wrapper p:last-child {
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+.box .main .tools .swiper-container02 .swiper-button-prev,
+.box .main .tools .swiper-container03 .swiper-button-prev,
+.box .main .tools .swiper-container02 .swiper-button-next,
+.box .main .tools .swiper-container03 .swiper-button-next {
+  margin-top: -22px;
+}
+.box .main .tools .swiper-container03 {
+  overflow: hidden;
+  position: relative;
+}
+.box .main .tools .swiper-container03 .swiper-wrapper p:first-child {
+  color: #60afed;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.box .main .activities {
+  padding: 40px 0;
+}
+.box .main .activities .notice {
+  margin: 54px 20px 0 20px;
+}
+.box .main .activities .notice .AImg {
+  float: left;
+}
+.box .main .activities .notice .ANews {
+  float: right;
+  width: 344px;
+  height: 282px;
+  border: 1px solid #c4c4c4;
+}
+.box .main .activities .notice .ANews h3 {
+  font-weight: 700;
+  color: #60afed;
+  font-size: 16px;
+  margin: 0 20px;
+  padding: 16px 0;
+  border-bottom: 1px solid #c4c4c4;
+}
+.box .main .activities .notice .ANews h3 span {
+  display: inline-block;
+  padding-left: 10px;
+  border-left: 3px solid #60afed;
+  font-family: "兰亭黑";
+  font-size: 20px;
+}
+.box .main .books {
+  padding-top: 40px;
+  background-color: #ffffff;
+}
+.box .main .books .bookList {
+  overflow: hidden;
+  margin: 0 20px;
+}
+.box .main .books .bookList ul {
+  width: 110%;
+  margin: 30px 0 20px 0;
+}
+.box .main .books .bookList ul li {
+  float: left;
+  width: 168px;
+  margin: 19px 30px 19px 0;
+}
+.box .main .books .bookList ul li p {
+  margin: 16px 0;
+  font-size: 12px;
+  font-family: "微软雅黑";
+}
+.box .main .partner {
+  padding-top: 40px;
+}
+.box .main .partner .partnerList {
+  overflow: hidden;
+  padding: 50px 0;
+}
+.box .main .partner .partnerList ul {
+  margin: 0 20px;
+  width: 110%;
+}
+.box .main .partner .partnerList ul li {
+  width: 300px;
+  float: left;
+  margin-right: 40px;
+}
+.box .main .partner .partnerList ul li a {
+  display: block;
+}
+.box .main .partner .partnerList ul li p {
+  display: inline-block;
+  margin: 14px 0;
+  font-family: "微软雅黑";
+  font-size: 12px;
 }

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SAP</title>
+    <link rel="stylesheet" type="text/css" href="./common/swiper-3.4.2.min.css">
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
     <style type="text/css">
@@ -21,7 +22,7 @@
 <body>
     <div class="box">
         <!-- 头部 -->
-        <div class="headBar">
+        <!-- <div class="headBar">
             <div class="HWrap w">
                 <div class="logo">
                     <a href="#"></a>
@@ -30,14 +31,9 @@
                     <a href="#">登录</a><span>|</span><a href="#">注册</a>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- 宣传 -->
-        <div class="advert">
-            <div class="Abox w clearfix">
-                <div class="slogan">
-                    数据管理与商务分析利器，实现数据真正价值
-                </div>
-            </div>
+        <div class="advert" style="background-color:rgb(251,251,251)">
         </div>
         <!-- 主要内容 -->
         <div class="main clearfix">
@@ -64,9 +60,299 @@
                 </div>
             </div>
             <!-- 顶尖企业使用 -->
-            <div></div>
+            <div class="users">
+                <div class="UBox w">
+                    <h4>顶尖企业都在用什么？</h4>
+                    <div class="companies clearfix">
+                        <ul>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/SF.png" alt="">
+                                </div>
+                                <div class="UEffect">顺丰速递：通过引入SAP最佳业务实践，顺丰首家实现全产业链集成创新应用管理平台，全面提升作业自动化水平，积极改善财务管理能力，深入优化业务流程，显著提升集团管控能力和业务效率，有效支撑未来多元化业务全球布局，积极推动“互联网+”时代的快递运输产业结构升级。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/railway.png" alt="">
+                                </div>
+                                <div class="UEffect">意大利铁路：基于SAP HANA实现预测性维护。维护服务的总体成本降低10%，每年节省近1亿欧元。预测性的动态计划维护达到50%，大幅降低了计划性维护和修正性维护。同时，因为减少了设备故障、延误的影响，乘客们也都非常开心，意大利铁路公司提高了声誉和客户满意度。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/comac.png" alt="">
+                                </div>
+                                <div class="UEffect">中国商飞：通过引入SAP解决方案，全力帮助中国商飞打造世界级航空高端“智”造，促进项目的研制成功和商业成功，实施体制机制创新、技术创新、管理创新，提高制造能力和管理水平，推动中国航空工业向更高领域迈进。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/icore.png" alt="">
+                                </div>
+                                <div class="UEffect">中微半导体：采用SAP HANA实现实时供应链质量管控。依托SAP HANA高性能的内存内计算，建立实时SPC质控体系，不仅实现了自动检测，更能通过对数据的分析感知，实现趋势预测和实时预警。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/sfy.png" alt="">
+                                </div>
+                                <div class="UEffect">索菲亚：借助SAP HANA新一代大数据计算平台，帮助索菲亚全面整合业务数据，规范公司流程，提升系统响应速度，充分挖掘业务数据价值，增强管理决策能力，为企业未来高速发展奠定坚实基础。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/hw.png" alt="">
+                                </div>
+                                <div class="UEffect">华为：华为通过引入SAP HANA实时应用平台，结合创新的华为SAP HANA一体机，打造充满活力的数字核心系统，全面提升计算性能，灵活快速响应业务需求，积极激发企业活力，化繁为简，引领共同客户构建产业生态圈，共建全联接世界。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/dell.png" alt="">
+                                </div>
+                                <div class="UEffect">戴尔：戴尔选用了 SAP HANA®平台集中数据，自动化的商务智能平台加速报表和分析。戴尔降低了大约50%的BI成本，甚至未来会持续降低。对于源系统的数据访问和操作需求减少了80%，为销售团队赢取时间关注于客户的需求。</div>
+                            </li>
+                            <li>
+                                <div class="ULogo">
+                                    <img src="./images/nba.png" alt="">
+                                </div>
+                                <div class="UEffect"> NBA.Com：借助SAP HANA平台提供的技术支持，NBA.com可以支持成千上万人的同时搜索以及上万条并发实时数据搜索请求所有比赛数据在赛事结束5分钟内即可上传刷新，而这些提升对于NBA赛事在全球范围内逾4.5亿球迷而言，极具吸引力。</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 轮播图 -->
+                <div class="carousel w">
+                    <div class="swiper-container01">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/slide01.png" alt="">
+                                <span>提效增值，菜百基于SAP HANA实现大数据分析</span>
+                                <img class="playBtn" src="./images/playButton.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/slide02.png" alt="">
+                                <span>SAP HANA助力中微打造实施供应链质量控制</span>
+                                <img class="playBtn" src="./images/playButton.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/slide03.png" alt="">
+                                <span>以SAP HANA平台为基础打造数字化蒙牛</span>
+                                <img class="playBtn" src="./images/playButton.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 数据管理三大利器 -->
+            <div class="tools">
+                <div class="TBox w">
+                    <h4>数据管理三大利器</h4>
+                    <div class="swiper-container02">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p>--SAP HANA:</p>
+                                <p> IDC最新调研发现，数字化转型领先企业CIO们都具备以下五个特征：1，他们具备转型领袖人格；2，他们组建数字化梦之队；3，他们将信息定位为数字化转型核心；4，他们选择/搭建面向未来的数字化平台；5，他们都在工作中嵌入创新指标。SAP HANA——支持数字化转型的数据平台。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/hana.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>——SAP Vora：</p>
+                                <p>大数据时代，企业数据和开源技术如何对接，看SAP Vora如何架起企业信息与开源世界的沟通桥梁，实现沉浸式情境分析。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/vora.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>--SAP MDG</p>
+                                <p>主数据作为企业运营中担当着关键角色的核心业务实体，尤为关键，如何治理好大数据，从数据中萃取更大的业务价值，打造企业核心竞争力，则更是大数据项目的基石。SAP MDG作为一个非常全面的主数据管理解决方案，提供开箱即用的主数据管理应用，支持主数据管理的整个生命周期；提供灵活的自定义主数据拓展框架，为大数据项目成功奠定基础。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/mdg.png" alt="">
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 商务分析五大利器 -->
+            <div class="tools" style="background-color:rgb(255,255,255)">
+                <div class="TBox w">
+                    <h4>商务分析五大利器</h4>
+                    <div class="swiper-container03">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./images/TSlide05.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>——商务分析云：</p>
+                                <p>作为下一代软件即服务 (SaaS) 解决方案，SAP BusinessObjects Cloud 集所有商务分析功能于一体，能够满足所有用户的需求。该软件基于 SAPHANA® Cloud Platform（SAP HANA 云平台）构建，支持整个企业访问通过可靠的公共云交付的分析工具，从而克服整个企业面临的单点解决方案和数据孤岛挑战。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/TSlide04.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>——预测分析与机器学习：</p>
+                                <p>把预测分析应用于各个业务流程、应用和业务线解决方案，使其能够保持竞争优势，成功的企业已经意识到预测分析这种潜力。利用SAP Predictive Analytics 软件，你的企业能够获得需要的洞察，实时了解业务情况，并自信地预测未来，进而作出更明智的前瞻性业务决策，为企业带来更多盈利。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/TSlide03.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>——企业级商务智能：</p>
+                                <p>SAP的企业BI平台允许客户只购买他们想要的BI产品的灵活解决方案。这是其他物料编码的前提，从而提供敏捷可视化、仪表盘、应用软件、报表和移动解决方案。它帮助企业提升数据分析能力，以便更充分地了解情况、做出更明智的决策并更加迅速地应对机遇和问题。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/TSlide02.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>——新一代数据仓库应用：</p>
+                                <p>SAP BW/4HANA工具能交付覆盖整个企业的实时分析结果。在分析过程中，该工具会尽可能减少数据的移动，并将企业内的所有数据整合为单一的逻辑视图，其中包括来自新数据源的数据以及新型数据。这款数据仓库解决方案能处理来自更多数据源的更多数据，为企业交付多种解决方案，帮助他们在开展下一代业务时取得更出色的业绩。</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./images/TSlide01.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <p>——数据可视化与自服务</p>
+                                <p>SAP BW/4HANA工具能交付覆盖整个企业的实时分析结果。在分析过程中，该工具会尽可能减少数据的移动，并将企业内的所有数据整合为单一的逻辑视图，其中包括来自新数据源的数据以及新型数据。这款数据仓库解决方案能处理来自更多数据源的更多数据，为企业交付多种解决方案，帮助他们在开展下一代业务时取得更出色的业绩。</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- 市场活动预告 -->
+            <div class="activities">
+                <div class="ABox w clearfix">
+                    <h4>市场活动预告</h4>
+                    <div class="notice">
+                        <div class="AImg">
+                            <img src="./images/activities.png" alt="">
+                        </div>
+                        <div class="ANews">
+                            <h3><span>相关活动/新闻</span></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 数据管理白皮书 -->
+            <div class="books">
+                <div class="BBox w">
+                    <h4>2017不可多得的数据管理白皮书</h4>
+                    <div class="bookList clearfix">
+                        <ul class="clearfix">
+                            <li>
+                                <img src="./images/DBook01.png" alt="">
+                                <p>CIO指南：大数据的新“玩”法</p>
+                            </li>
+                            <li>
+                                <img src="./images/DBook02.png" alt="">
+                                <p>数字化转型中的新一代数据管理</p>
+                            </li>
+                            <li> <img src="./images/DBook03.png" alt="">
+                                <p>IT管理者如何实现端到端卓越性能</p>
+                            </li>
+                            <li> <img src="./images/DBook04.png" alt="">
+                                <p>智能管理拥抱数字经济，重新构想无限可能</p>
+                            </li>
+                            <li> <img src="./images/DBook05.png" alt="">
+                                <p>用情境感知能力，打造更智慧的数字化企业</p>
+                            </li>
+                            <li> <img src="./images/DBook06.png" alt="">
+                                <p>灵活定义流程，全面的主数据管理解决方案是如何诞生的？</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 商务分析白皮书 -->
+            <div class="books" style="background-color:rgb(251,251,251)">
+                <div class="BBox w">
+                    <h4>2017不可多得的商务分析白皮书</h4>
+                    <div class="bookList clearfix">
+                        <ul class="clearfix">
+                            <li>
+                                <img src="./images/FB01.png" alt="">
+                                <p>IDC商务分析云解决方案，推动决策支持服务的普及</p>
+                            </li>
+                            <li>
+                                <img src="./images/FB02.png" alt="">
+                                <p>商务分析云疑难解答手册--简约而不简单</p>
+                            </li>
+                            <li> <img src="./images/FB03.png" alt="">
+                                <p>特征工程六大技巧：数据科学家的必备知识</p>
+                            </li>
+                            <li> <img src="./images/FB04.png" alt="">
+                                <p>智能管理拥抱数字经济，重新构想无限可能</p>
+                            </li>
+                            <li> <img src="./images/FB05.png" alt="">
+                                <p>用情境感知能力，打造更智慧的数字化企业</p>
+                            </li>
+                            <li> <img src="./images/FB06.png" alt="">
+                                <p> 一款工具是如何解决众多不同行业的顽疾的</p>
+                            </li>
+                            <li> <img src="./images/FB07.png" alt="">
+                                <p>自信地预测未来，实现更卓越的业务成果</p>
+                            </li>
+                            <li> <img src="./images/FB08.png" alt="">
+                                <p>用更好的商务智能平台，做更好的商业决策</p>
+                            </li>
+                            <li> <img src="./images/FB09.png" alt="">
+                                <p>新一代商务智能工具，诠释新解决方案价值</p>
+                            </li>
+                            <li> <img src="./images/FB10.png" alt="">
+                                <p>IDC分析师：实施分析战略，加速获取洞察</p>
+                            </li>
+                            <li> <img src="./images/FB11.png" alt="">
+                                <p>SAP商务智能平台的工具箱</p>
+                            </li>
+                            <li> <img src="./images/FB12.png" alt="">
+                                <p>Forrester分析报告：新BI工具下的企业投资回报比（ROI)</p>
+                            </li>
+                            <li> <img src="./images/FB13.png" alt="">
+                                <p>首席信息官现代数据仓库指南</p>
+                            </li>
+                            <li> <img src="./images/FB14.png" alt="">
+                                <p>面向数字化企业的下一代数据仓库</p>
+                            </li>
+                            <li> <img src="./images/FB15.png" alt="">
+                                <p>用户手册：BW/4HANA常见应用问题解答</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 招募伙伴 -->
+            <div class="partner" style="background-color:rgb(255,255,255)">
+                <div class="PBox w">
+                    <h4>合作伙伴招募</h4>
+                    <div class="partnerList clearfix">
+                        <ul>
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/bxt9tuJ_ahGgk9PtYmSxaw">
+                                    <img src="./images/p01.png" alt="">
+                                </a>
+                                <p> SAP Analytics Extensions Directory之：移动端BI管理驾驶舱—河狸科技</p>
+                            </li>
+                            <li>
+                                <a href="http://mp.weixin.qq.com/s/pb-NRole5ltTdhMmAZ22GQ">
+                                    <img src="./images/p02.png" alt="">
+                                </a>
+                                <p>最新优惠包 | 3周上线，20万起拥有SAP数据分析解决方案</p </li>
+                                <li>
+                                    <a href="#"><img src="./images/p03.png" alt="">
+                                    </a>
+                                    <p>欢迎ISV联系hua.deng@sap.com，获取更多有关SAP HANA合作伙伴相关政策。</p>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+<script src="./common/jquery-3.2.1.min.js"></script>
+<script src="./common/swiper-3.4.2.jquery.min.js"></script>
+<script src="./js/index.js"></script>
 
 </html>
