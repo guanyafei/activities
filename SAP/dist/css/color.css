@@ -1,0 +1,84 @@
+a:hover {
+  color: #f0721d;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+  background: #f0721d;
+}
+.show-detailed a {
+  background: #f0721d;
+}
+.show-detailed a:hover {
+  background: #87bdf0;
+}
+#NavBar {
+  background: #f0721d;
+}
+#NavBar .Nav-list li {
+  border-left-color: #cc5a0e;
+}
+#NavBar .Nav-list li a:hover {
+  color: #87bdf0;
+}
+#NavBar .Nav-list li a.on {
+  background: #87bdf0;
+  color: #f0721d;
+}
+#NavBar .Nav-list li:last-child {
+  border-right-color: #cc5a0e;
+}
+.mod-title span {
+  border-left-color: #f0721d;
+  color: #f0721d;
+}
+.tab-header .title {
+  color: #f0721d;
+}
+.tab-header .menu a:hover {
+  color: #f0721d;
+}
+.tab-header .menu a.on {
+  border-bottom-color: #f0721d;
+  color: #f0721d;
+}
+.tab-header .menu a.on em {
+  border-top-color: #f0721d;
+}
+.news-mod .list a:hover {
+  color: #f0721d;
+}
+.news-mod .list a em {
+  color: #f0721d;
+}
+.download-mod .pics:hover {
+  background: #f0721d;
+}
+.textlive-mod .textlive-list .time em {
+  color: #f0721d;
+}
+.date-mod .day span {
+  background: #f0721d;
+}
+.date-mod .apply-btn a {
+  border-color: #f0721d;
+}
+.date-mod .apply-btn a:hover {
+  background: #f0721d;
+}
+.apply .title {
+  color: #f0721d;
+}
+.roster-mod .btn a {
+  color: #f0721d;
+}
+.comment-mod .getcomment {
+  background: #DDDDDD;
+  color: #666;
+}
+.comment-mod .getcomment:hover {
+  background: #f0721d;
+  text-decoration: none;
+  color: #87bdf0;
+}
