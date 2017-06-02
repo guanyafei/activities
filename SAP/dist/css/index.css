@@ -102,6 +102,10 @@
   height: 300px;
   overflow: hidden;
   position: relative;
+  /* .swiper-button-prev,
+                    .swiper-button-next {
+                        margin-top: -76px;
+                    } */
 }
 .box .main .users .carousel .swiper-container01 video {
   width: 327px;
@@ -125,9 +129,9 @@
   margin-top: -84px;
   margin-left: -31px;
 }
-.box .main .users .carousel .swiper-container01 .swiper-button-prev,
-.box .main .users .carousel .swiper-container01 .swiper-button-next {
-  margin-top: -76px;
+.box .main .users .carousel .swiper-button-prev,
+.box .main .users .carousel .swiper-button-next {
+  margin: 1206px 120px 0 120px;
 }
 .box .main .tools {
   padding: 40px 0;
@@ -171,6 +175,13 @@
   color: #60afed;
   font-size: 20px;
   margin-bottom: 20px;
+}
+.box .main .tools .swiper-button-prev,
+.box .main .tools .swiper-button-next {
+  margin: 1720px 120px 0 120px;
+}
+.box .main .tools .item {
+  margin: 2200px 120px 0 120px;
 }
 .box .main .activities {
   padding: 40px 0;
