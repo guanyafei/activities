@@ -31,3 +31,31 @@ var mySwiper = new Swiper('.swiper-container03', {
     nextButton: '.swiper-button-next',
     spaceBetween: 20
 });
+
+// 视频设置
+$(".playBtn").each(function (idx, ele) {
+    $(ele).click(function () {
+        $("video").each(function (idx, ele) {
+            if (!ele.paused) {
+                $(ele).removeAttr("controls");
+                ele.load();
+                $(ele).siblings(".playBtn").fadeIn();
+            }
+        });
+        $(this).siblings("video")[0].play();
+        $(this).fadeOut();
+        $(this).siblings("video").attr("controls", "controls");
+    });
+});
+
+// 返回按钮设置
+$(window).scroll(function () {
+    if (document.body.scrollTop > 200) {
+        $("#GoTop").fadeIn("slow");
+    } else {
+        $("#GoTop").fadeOut("normal");
+    }
+});
+$("#GoTop").click(function () {
+    $("html,body").animate({ scrollTop: 0 }, 500);
+});

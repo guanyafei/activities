@@ -32,6 +32,10 @@ gulp.task('img', () => {
         .pipe(gulp.dest('./dist/images'));
 });
 
+gulp.task('video', () => {
+    return gulp.src('./src/video/*.mp4')
+        .pipe(gulp.dest('./dist/video'));
+});
 
 //压缩 自定义 js 文件
 gulp.task('scripts', () => {
@@ -75,13 +79,12 @@ gulp.task('watch-scripts', ['scripts'], (callback) => {
 });
 
 
-gulp.task('serve', ['commonJs', 'scripts', 'less', 'html', 'img'], () => {
+gulp.task('serve', ['commonJs', 'scripts', 'less', 'html', 'img','video'], () => {
     browserSync.init({
         server: {
             baseDir: "./dist/"
         }
     });
-    
     gulp.watch('./src/**/*.html', ['watch-html']);
     gulp.watch('./src/less/**/*.less', ['watch-less']);
     gulp.watch('./src/js/*.js', ['watch-scripts']);

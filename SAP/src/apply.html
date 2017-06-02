@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html xmlns:wb="http://open.weibo.com/wb">
+<html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="renderer" content="webkit">
-    <title>成功多云战略：为何数据和工作负载管理是关键 云网络会议--会议频道</title>
+    <title>SAP，数据管理与商务分析利器，实现数据真正价值</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/color.css">
 </head>
 
 <body>
-   
+   <!-- 顶部条 -->
+    <div id="TopBar">
+        <div class="warp">
+            <ul class="row">
+                <ol class="col3">
+                    <a href="#" class="logo">LOGO</a>
+                </ol>
+
+                <ol class="offset9 loginbar">
+                        <a href="http://www.cio.com.cn/enterprisezone" class="UserLogin">e行专属社区</a>
+                </ol>
+
+            </ul>
+        </div>
+    </div>
     <!-- 页头 -->
     <div id="Header">
         <!-- 头图 -->
@@ -23,18 +37,18 @@
             <!-- 内容 -->
             <div class="col">
                 <div id="MainBody">
-                    <form action="http://meet.cio.com.cn/meet/newmeeting/addinroll" id="Apply_From" method="post" onSubmit="return false;">
+                    <form action="#" id="Apply_From" method="post">
                         <!-- 门票 -->
                         <!-- 报名表 -->
                         <div class="apply">
-                            <h2 class="title"><span>报名表</span><b></b></h2>
-                            <input type="hidden" name="sitefrom" value="网站" />
+                            <h2 class="title"><span>下载记录表</span><b></b></h2>
+                            <input type="hidden" name="d_id" value="" />
                             <div class="apply-contbox">
                                 <!-- 行业 -->
                                 <div class="form-item">
                                     <span class="label">姓名<span class="required">*</span></span>
                                     <div>
-                                        <input name="cont[0]" value="大智慧" class="text" type="text" data-rule-required="true" data-msg-required="请填写您的姓名" />
+                                        <input name="cont[0]" value="" class="text" type="text" data-rule-required="true" data-msg-required="请填写您的姓名" />
                                         <div class="show-msg"></div>
                                     </div>
                                 </div>
@@ -216,18 +230,27 @@
         </div>
     </div>
     </div>
+    <!-- 版权说明 -->
+    <div id="Footer">
+        <div class="warp">
+            <p>Copyright &copy; 《IT经理世界》杂志社 All Rights Reserved 版权所有 复制必究</p>
+            <p>京ICP证010184-4号</p>
+        </div>
+    </div>
+<div id="GoTop"><a href="javascript:void(0)"></a></div>
 </body>
-
-</html>
-<!-- 百度分享 -->
-<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=2&amp;pos=right&amp;uid=6594836"></script>
-<script type="text/javascript" id="bdshell_js"></script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000);
+<script src="./common/jquery-3.2.1.min.js"></script>
+<script>
+    // 返回按钮设置
+$(window).scroll(()=> {
+        if (document.body.scrollTop > 200) {
+            $("#GoTop").fadeIn("slow");
+        } else {
+            $("#GoTop").fadeOut("normal");
+        }
+});
+$("#GoTop").click(function(){
+    $("html,body").animate({scrollTop: 0},500); 
+});
 </script>
-<div style="display:none">
-    <script type="text/javascript">
-    var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ffd44e40a93ba6a8897212a3a889335d6' type='text/javascript'%3E%3C/script%3E"));
-    </script>
-</div>
+</html>

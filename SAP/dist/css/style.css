@@ -374,6 +374,74 @@ video {
 .col:after {
   clear: both;
 }
+#TopBar {
+  height: 35px;
+  background: #333;
+}
+#TopBar .logo {
+  display: block;
+  height: 35px;
+  text-indent: -100px;
+  overflow: hidden;
+  background: url(../images/logo.png) no-repeat left center;
+}
+#TopBar .search {
+  margin-top: 4.5px;
+  height: 20px;
+  position: relative;
+}
+#TopBar .search .ico {
+  position: absolute;
+  top: 0;
+  left: 5px;
+}
+#TopBar .search input {
+  margin: 0;
+  border: 0;
+  padding: 3px 5px 3px 30px;
+  height: 20px;
+  line-height: 20px;
+  width: 200px;
+  border-radius: 3px;
+  background: #fff url(../images/inputbg.png) repeat-x;
+  outline: 0;
+}
+#TopBar .loginbar {
+  text-align: right;
+  line-height: 35px;
+}
+#TopBar .loginbar span {
+  padding: 0 8px;
+}
+#TopBar .loginbar a {
+  color: #fff;
+}
+#GoTop {
+  width: 54px;
+  height: 54px;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  right: 10px;
+  bottom: 15px;
+  _position: absolute;
+  _bottom: auto;
+  _margin-bottom: 15px;
+}
+#GoTop a {
+  display: block;
+  width: 54px;
+  height: 54px;
+  background: url(../images/go_top.png) no-repeat 0 0;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  transition: all 0.3s ease;
+}
+#GoTop a:hover {
+  background-position: -54px 0;
+}
 .input-item {
   padding-left: 80px;
   height: 71px;
@@ -424,6 +492,11 @@ video {
 .form-item {
   padding-left: 140px;
   height: 51px;
+}
+.form-item select {
+  background: #fff url(../images/inputbg.png) repeat-x top;
+  padding: 9px 5px;
+  border: 1px solid #e4e4e4;
 }
 .form-item .label {
   float: left;

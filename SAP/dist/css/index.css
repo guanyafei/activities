@@ -46,6 +46,7 @@
 }
 .box .main .select h4 {
   margin-bottom: 10px;
+  font-size: 32px;
 }
 .box .main .select .options {
   padding: 30px 0;
@@ -74,6 +75,9 @@
   padding: 40px 0;
   background-color: #ffffff;
 }
+.box .main .users h4 {
+  font-size: 32px;
+}
 .box .main .users .companies ul {
   margin: 34px 0;
 }
@@ -95,11 +99,17 @@
   font-size: 14px;
 }
 .box .main .users .carousel .swiper-container01 {
+  height: 300px;
   overflow: hidden;
   position: relative;
 }
+.box .main .users .carousel .swiper-container01 video {
+  width: 327px;
+  height: 183px;
+}
 .box .main .users .carousel .swiper-container01 .swiper-wrapper .swiper-slide {
   position: relative;
+  text-align: center;
 }
 .box .main .users .carousel .swiper-container01 .swiper-wrapper .swiper-slide span {
   color: #626262;
@@ -112,23 +122,28 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -46px;
+  margin-top: -84px;
   margin-left: -31px;
 }
 .box .main .users .carousel .swiper-container01 .swiper-button-prev,
 .box .main .users .carousel .swiper-container01 .swiper-button-next {
-  margin-top: -52px;
+  margin-top: -76px;
 }
 .box .main .tools {
   padding: 40px 0;
 }
+.box .main .tools a {
+  text-decoration: none;
+}
 .box .main .tools h4 {
   margin-bottom: 56px;
+  font-size: 32px;
 }
 .box .main .tools .swiper-container02,
 .box .main .tools .swiper-container03 {
   overflow: hidden;
   position: relative;
+  height: 300px;
 }
 .box .main .tools .swiper-container02 .swiper-wrapper p:first-child,
 .box .main .tools .swiper-container03 .swiper-wrapper p:first-child {
@@ -159,6 +174,9 @@
 }
 .box .main .activities {
   padding: 40px 0;
+}
+.box .main .activities h4 {
+  font-size: 32px;
 }
 .box .main .activities .notice {
   margin: 54px 20px 0 20px;
@@ -191,6 +209,9 @@
   padding-top: 40px;
   background-color: #ffffff;
 }
+.box .main .books h4 {
+  font-size: 32px;
+}
 .box .main .books .bookList {
   overflow: hidden;
   margin: 0 20px;
@@ -211,6 +232,9 @@
 }
 .box .main .partner {
   padding-top: 40px;
+}
+.box .main .partner h4 {
+  font-size: 32px;
 }
 .box .main .partner .partnerList {
   overflow: hidden;
