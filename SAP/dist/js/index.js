@@ -45,6 +45,7 @@ $(".playBtn").each(function (idx, ele) {
         $(this).siblings("video")[0].play();
         $(this).fadeOut();
         $(this).siblings("video").attr("controls", "controls");
+        return false;
     });
 });
 

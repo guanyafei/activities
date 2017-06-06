@@ -42,7 +42,7 @@
 }
 .box .main {
   background-color: #fbfbfb;
-  padding-top: 80px;
+  padding-top: 30px;
 }
 .box .main .select h4 {
   margin-bottom: 10px;
@@ -72,7 +72,7 @@
   margin-top: -8px;
 }
 .box .main .users {
-  padding: 40px 0;
+  padding: 30px 0;
   background-color: #ffffff;
 }
 .box .main .users h4 {
@@ -98,14 +98,13 @@
   font-family: "微软雅黑";
   font-size: 14px;
 }
+.box .main .users .carousel {
+  height: 200px;
+  position: relative;
+}
 .box .main .users .carousel .swiper-container01 {
-  height: 300px;
   overflow: hidden;
   position: relative;
-  /* .swiper-button-prev,
-                    .swiper-button-next {
-                        margin-top: -76px;
-                    } */
 }
 .box .main .users .carousel .swiper-container01 video {
   width: 327px;
@@ -126,15 +125,24 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -84px;
+  margin-top: -30px;
   margin-left: -31px;
 }
-.box .main .users .carousel .swiper-button-prev,
-.box .main .users .carousel .swiper-button-next {
-  margin: 1206px 120px 0 120px;
+.box .main .users .carousel .arrow {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+.box .main .users .carousel .arrow .swiper-button-prev {
+  float: right;
+  left: -50;
+}
+.box .main .users .carousel .arrow .swiper-button-next {
+  float: left;
+  right: -50px;
 }
 .box .main .tools {
-  padding: 40px 0;
+  padding: 30px 0;
 }
 .box .main .tools a {
   text-decoration: none;
@@ -149,15 +157,15 @@
   position: relative;
   height: 300px;
 }
-.box .main .tools .swiper-container02 .swiper-wrapper p:first-child,
-.box .main .tools .swiper-container03 .swiper-wrapper p:first-child {
+.box .main .tools .swiper-container02 .swiper-wrapper p.title,
+.box .main .tools .swiper-container03 .swiper-wrapper p.title {
   color: #60afed;
   font-family: "微软雅黑";
   font-size: 20px;
   margin-bottom: 20px;
 }
-.box .main .tools .swiper-container02 .swiper-wrapper p:last-child,
-.box .main .tools .swiper-container03 .swiper-wrapper p:last-child {
+.box .main .tools .swiper-container02 .swiper-wrapper p.detail,
+.box .main .tools .swiper-container03 .swiper-wrapper p.detail {
   font-family: "微软雅黑";
   font-size: 14px;
 }
@@ -171,20 +179,44 @@
   overflow: hidden;
   position: relative;
 }
-.box .main .tools .swiper-container03 .swiper-wrapper p:first-child {
+.box .main .tools .swiper-container03 .swiper-wrapper p.title {
   color: #60afed;
   font-size: 20px;
   margin-bottom: 20px;
 }
-.box .main .tools .swiper-button-prev,
-.box .main .tools .swiper-button-next {
-  margin: 1720px 120px 0 120px;
+.box .main .tools video {
+  width: 440px;
+  height: 281px;
 }
-.box .main .tools .item {
-  margin: 2200px 120px 0 120px;
+.box .main .tools .swiper-slide {
+  position: relative;
+}
+.box .main .tools .swiper-slide .playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -31px;
+  margin-top: -30px;
+}
+.box .main .tools .TBox {
+  position: relative;
+}
+.box .main .tools .TBox .arrow {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: 40px;
+}
+.box .main .tools .TBox .arrow .swiper-button-prev {
+  float: right;
+  left: -50;
+}
+.box .main .tools .TBox .arrow .swiper-button-next {
+  float: left;
+  right: -50px;
 }
 .box .main .activities {
-  padding: 40px 0;
+  padding: 30px 0;
 }
 .box .main .activities h4 {
   font-size: 32px;
@@ -217,7 +249,7 @@
   font-size: 20px;
 }
 .box .main .books {
-  padding-top: 40px;
+  padding-top: 30px;
   background-color: #ffffff;
 }
 .box .main .books h4 {
@@ -242,7 +274,7 @@
   font-family: "微软雅黑";
 }
 .box .main .partner {
-  padding-top: 40px;
+  padding-top: 30px;
 }
 .box .main .partner h4 {
   font-size: 32px;
