@@ -1,12 +1,12 @@
 //轮播图
 var mySwiper = new Swiper('.swiper-container01', {
-        autoplay: 5000, //可选选项，自动滑动
-        speed: 300,
-        autoplayDisableOnInteraction : true,
+        // autoplay: 5000, //可选选项，自动滑动
+        // speed: 300,
+        // autoplayDisableOnInteraction : true,
         slidesPerView: 3,
         slidesPerGroup: 3,
-        prevButton: '.swiper-button-prev',
-        nextButton: '.swiper-button-next',
+        // prevButton: '.swiper-button-prev',
+        // nextButton: '.swiper-button-next',
         spaceBetween: 20,
     })
     //轮播图
