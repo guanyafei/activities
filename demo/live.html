@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>视频直播</title>
+	<style>
+	/*样式初始化*/
+	html,body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,fieldset,legend,input,textarea,select{
+		margin: 0;
+		padding: 0;
+	}
+	ol,ul,li{
+		list-style: none;
+	}
+	img{
+		border: 0;
+		vertical-align: middle;
+	}
+	.clearfix::after{
+		content: "";
+		height: 0;
+		line-height: 0;
+		display: block;
+		visibility: hidden;
+		clear: both;
+	}
+	.clearfix{
+		*zoom: 1;
+	}
+	.box{
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		text-size-adjust: none;
+	}
+	header{
+		padding: 20px 10px;
+		background-color: #bd8a44;
+	}
+	.wrap{
+		min-height: auto;
+	}
+	.wrap .live_wrap {
+		width: 100%;
+		height: 200px;
+		background-color: grey;
+	}
+	.wrap .live_tab{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-bottom: 1px solid #eee;
+	}
+	.wrap .live_tab .item{
+		flex: 1;
+		text-align: center;
+		line-height: 50px;
+	}
+	.wrap .live_tab .active{
+		border-bottom: 2px solid #bd8a44;
+	}
+	.wrap .chat_area{
+		width: 100%;
+		/*overflow: hidden;*/
+	}
+	.wrap .content{
+		width: 200%;
+		height: auto;
+	}
+	.wrap .content .chat_banner{
+		width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: white;
+		text-align: center;
+	}
+	.wrap .content .chat_area{
+		background-color: #F4F4F4;
+		overflow: hidden;
+		overflow-y: scroll;
+	}
+
+	.wrap .content .chat{
+		height: 400px;
+	}
+	.wrap .content .chat_banner .submitText{
+		border: 1px solid #ddd;
+		height: 30px;
+		margin: 4px 0;
+		width: 80%;
+		padding-left: 10px;
+		border-radius: 15px;
+		outline: none;
+	}
+	.wrap .content>div{
+		width: 50%;
+		float: left;
+	}
+	.wrap .content .presenter{
+		height: 300px;
+		background-color:#F4F4F4 ;
+	}
+	.wrap .content .submitBtn{
+		display: inline-block;
+		position: absolute;
+		right: 50px;
+		top: 50%;
+		margin-top: -8px;
+		color: #797481;
+        font-size: 16px;
+        cursor: pointer;
+	}
+</style>
+</head>
+<body class="box">
+	<!-- 视频主题 -->
+	<header>暴走大事件,每周五更新</header>
+	<div class="wrap">
+		<div class="live_wrap">
+			<!-- <video src=""></video> -->
+			视频
+		</div>
+		<div class="live_tab">
+			<div class="item active">聊天</div>
+			<div class="item">主播信息</div>
+		</div>
+		<!-- 内容区域 -->
+		<div class="content clearfix">
+			<!-- 聊天区域 -->
+			<div class="chat_area">
+				<div class="chat">
+				</div>
+				<!-- 聊天输入框 -->
+				<div class="chat_banner">
+						<input type="text" class="submitText" placeholder="吐个槽呗">
+						<span class="submitBtn">|&nbsp;&nbsp;吐槽</span>
+				</div>
+			</div>	
+			<!-- 主播信息 -->
+			<div class="presenter"></div>
+		</div>
+		
+	</div>
+</body>
+</html>
