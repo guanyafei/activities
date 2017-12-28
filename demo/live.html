@@ -70,7 +70,8 @@
 	}
 	.wrap .content{
 		width: 200%;
-		height: auto;
+		height: 500px;
+		background-color: #F4F4F4;
 	}
 	.wrap .content .chat_banner{
 		width: 100%;
@@ -84,10 +85,11 @@
 		background-color: #F4F4F4;
 		overflow: hidden;
 		overflow-y: scroll;
+		height: 0px;
 	}
 
 	.wrap .content .chat{
-		height: 400px;
+		/*height: 500px;*/
 	}
 	.wrap .content .chat_banner .submitText{
 		border: 1px solid #ddd;
@@ -103,8 +105,8 @@
 		float: left;
 	}
 	.wrap .content .presenter{
-		height: 300px;
 		background-color:#F4F4F4 ;
+		height: 0;
 	}
 	.wrap .content .submitBtn{
 		display: inline-block;
@@ -148,4 +150,16 @@
 		
 	</div>
 </body>
+<script>
+	// 初始化评论区高度
+	(function(){
+        var chatAreaDom = document.getElementsByClassName("chat_area")[0];
+        var contentDom = document.getElementsByClassName("content")[0];
+        var presenterDom = document.getElementsByClassName("presenter")[0];
+        contentDom.style.height = screen.height - 58 -200 -50 + "px";
+        chatAreaDom.style.height = screen.height - 58 -200 -50 - 40 + "px";
+        presenterDom.style.height = screen.height - 58 -200 -50 + "px";
+
+	})();
+</script>
 </html>
