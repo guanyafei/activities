@@ -4,121 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>视频直播</title>
-	<style>
-	/*样式初始化*/
-	html,body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,fieldset,legend,input,textarea,select{
-		margin: 0;
-		padding: 0;
-	}
-	ol,ul,li{
-		list-style: none;
-	}
-	img{
-		border: 0;
-		vertical-align: middle;
-	}
-	.clearfix::after{
-		content: "";
-		height: 0;
-		line-height: 0;
-		display: block;
-		visibility: hidden;
-		clear: both;
-	}
-	.clearfix{
-		*zoom: 1;
-	}
-	.box{
-		width: 100%;
-		height: 100%;
-		overflow: hidden;
-		position: fixed;
-		top: 0;
-		left: 0;
-		text-size-adjust: none;
-	}
-	header{
-		padding: 20px 10px;
-		background-color: #bd8a44;
-	}
-	.wrap{
-		min-height: auto;
-	}
-	.wrap .live_wrap {
-		width: 100%;
-		height: 200px;
-		background-color: grey;
-	}
-	.wrap .live_tab{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		border-bottom: 1px solid #eee;
-	}
-	.wrap .live_tab .item{
-		flex: 1;
-		text-align: center;
-		line-height: 50px;
-	}
-	.wrap .live_tab .active{
-		border-bottom: 2px solid #bd8a44;
-	}
-	.wrap .chat_area{
-		width: 100%;
-		/*overflow: hidden;*/
-	}
-	.wrap .content{
-		width: 200%;
-		height: 500px;
-		background-color: #F4F4F4;
-	}
-	.wrap .content .chat_banner{
-		width: 100%;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		background-color: white;
-		text-align: center;
-	}
-	.wrap .content .chat_area{
-		background-color: #F4F4F4;
-		overflow: hidden;
-		overflow-y: scroll;
-		height: 0px;
-	}
-
-	.wrap .content .chat{
-		/*height: 500px;*/
-	}
-	.wrap .content .chat_banner .submitText{
-		border: 1px solid #ddd;
-		height: 30px;
-		margin: 4px 0;
-		width: 80%;
-		padding-left: 10px;
-		border-radius: 15px;
-		outline: none;
-	}
-	.wrap .content>div{
-		width: 50%;
-		float: left;
-	}
-	.wrap .content .presenter{
-		background-color:#F4F4F4 ;
-		height: 0;
-	}
-	.wrap .content .submitBtn{
-		display: inline-block;
-		position: absolute;
-		right: 50px;
-		top: 50%;
-		margin-top: -8px;
-		color: #797481;
-        font-size: 16px;
-        cursor: pointer;
-	}
-</style>
+	<link rel="stylesheet" href="./live.css">
+	<script src="./jquery-3.2.1.min.js"></script>
 </head>
 <body class="box">
 	<!-- 视频主题 -->
@@ -129,37 +16,98 @@
 			视频
 		</div>
 		<div class="live_tab">
-			<div class="item active">聊天</div>
-			<div class="item">主播信息</div>
+			<div class="item">聊天</div>
+			<div class="item  active">主播</div>
+			<div class="item">直播信息</div>
 		</div>
 		<!-- 内容区域 -->
 		<div class="content clearfix">
 			<!-- 聊天区域 -->
-			<div class="chat_area">
-				<div class="chat">
-				</div>
-				<!-- 聊天输入框 -->
-				<div class="chat_banner">
+			<div class="content_box clearfix">
+				<div class="chat_area">
+					<div class="chat">
+						<div class="chat_tip"><span>系统消息&nbsp;</span>IT经理世界官方倡导绿色直播，对直播内容进行24小时在线巡查。</div>
+						<p class="dm-item"><span>黄飞氵工鸟：</span>太卡了</p>
+						<p class="dm-item"><span>摄影后期大炮：</span>帅</p>
+						<p class="dm-item"><span>励志长高：</span>男孩子？？？</p>
+						<p class="dm-item"><span>星憓XH：</span>我以为是女的</p>
+						<p class="dm-item"><span>励志长高：</span>不应该小姐姐？？？</p>
+						<p class="dm-item"><span>冷影痴月：</span>这不是小姐姐吗</p>
+						<p class="dm-item"><span>范冰冰本冰：</span>刷新就不卡啦</p>
+						<p class="dm-item"><span>雪球大帅比：</span>我wiff兄弟</p>
+						<p class="dm-item"><span>守门人D：</span>卡没有听到</p>
+						<p class="dm-item"><span>不识人间苍凉事：</span>好像大家都卡</p>
+						<p class="dm-item"><span>桜七：</span>可爱的都是男孩子</p>
+						<p class="dm-item"><span>黑土玉：</span>4g也卡</p>
+						<p class="dm-item"><span>落红不煽情：</span>完了，性别认知障碍</p>
+						<p class="dm-item"><span>摄影后期大炮：</span>666</p>
+						<p class="dm-item"><span>星憓XH：</span>我以为是女的</p>
+						<p class="dm-item"><span>卿瑶儿：</span>吗</p>
+						<p class="dm-item"><span>励志长高：</span>不应该小姐姐？？？</p>
+						<p class="dm-item"><span>黑土玉：</span>4g也卡</p>
+						<p class="dm-item"><span>落红不煽情：</span>完了，性别认知障碍</p>
+						<p class="dm-item"><span>摄影后期大炮：</span>666</p>
+						<p class="dm-item"><span>星憓XH：</span>我以为是女的</p>
+						<p class="dm-item"><span>卿瑶儿：</span>吗</p>
+						<p class="dm-item"><span>励志长高：</span>不应该小姐姐？？？</p>
+						<p class="dm-item"><span>励志长高：</span>不应该小姐姐？？？</p>
+						<p class="dm-item"><span>黑土玉：</span>4g也卡</p>
+						<p class="dm-item"><span>落红不煽情：</span>完了，性别认知障碍</p>
+						<p class="dm-item"><span>摄影后期大炮：</span>666</p>
+						<p class="dm-item"><span>星憓XH：</span>我以为是女的</p>
+						<p class="dm-item"><span>卿瑶儿：</span>吗</p>
+						<p class="dm-item"><span>励志长高：</span>不应该小姐姐？？？</p>
+					</div>
+					<!-- 聊天输入框 -->
+					<div class="chat_banner">
 						<input type="text" class="submitText" placeholder="吐个槽呗">
-						<span class="submitBtn">|&nbsp;&nbsp;吐槽</span>
+						<span class="submitBtn">|&nbsp;&nbsp;发言</span>
+					</div>
+				</div>	
+				<!-- 主播信息 -->
+				<div class="presenter">
+					<p><span>姓名:&nbsp;</span>张三</p>
+					<p><span>公司:&nbsp;</span>计世传媒</p>
+					<p><span>职位:&nbsp;</span>CEO</p>
 				</div>
-			</div>	
-			<!-- 主播信息 -->
-			<div class="presenter"></div>
+				<!-- 直播简介 -->
+				<div class="summary_box">
+					<div class="theme">
+						<span class="title">主题:</span>
+						<div class="theme_area">1111111111111111</div>
+					</div>
+					
+					<div class="summary">
+						<span class="title">简介:</span>
+						<div class="summary_area">
+							111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
+						</div>
+					</div>
+				</div>
+			</div>
+			
 		</div>
 		
 	</div>
 </body>
 <script>
-	// 初始化评论区高度
-	(function(){
-        var chatAreaDom = document.getElementsByClassName("chat_area")[0];
-        var contentDom = document.getElementsByClassName("content")[0];
-        var presenterDom = document.getElementsByClassName("presenter")[0];
-        contentDom.style.height = screen.height - 58 -200 -50 + "px";
-        chatAreaDom.style.height = screen.height - 58 -200 -50 - 40 + "px";
-        presenterDom.style.height = screen.height - 58 -200 -50 + "px";
-
-	})();
+	
+	(function($){
+		// 初始化评论区高度
+		var headerHight = $("header").outerHeight();
+		var liveWrapHeight = $(".live_wrap").height();
+		var liveTabHeight = $(".live_tab").height();
+		var chatBannerHeight = $(".chat_banner").height();
+		var commonHeight = $(window).height() - headerHight - liveWrapHeight - liveTabHeight- chatBannerHeight;
+		$(".chat_area").height(commonHeight+ chatBannerHeight);
+		$(".content").height(commonHeight);
+		$(".presenter").height(commonHeight + chatBannerHeight);
+		$(".summary_box").height(commonHeight + chatBannerHeight-20);
+		$(".chat").height(commonHeight - 10);
+		var screenWidth = $(window).width();
+        // 初始化内容区展示界面
+        $(".content .content_box").css("left",-screenWidth);
+    })(jQuery);
 </script>
+<script src="./live.js"></script>
 </html>

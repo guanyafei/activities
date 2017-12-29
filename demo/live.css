@@ -1,0 +1,156 @@
+/*样式初始化*/
+html,body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,dt,fieldset,legend,input,textarea,select{
+	margin: 0;
+	padding: 0;
+}
+ol,ul,li{
+	list-style: none;
+}
+img{
+	border: 0;
+	vertical-align: middle;
+}
+.clearfix::after{
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.clearfix{
+	*zoom: 1;
+}
+.box{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-size-adjust: none;
+}
+/* 视频主题 */
+header{
+	padding: 10px 10px;
+	background-color: #bd8a44;
+}
+.wrap{
+	min-height: auto;
+}
+.wrap .live_wrap {
+	width: 100%;
+	height: 200px;
+	background-color: grey;
+}
+.wrap .live_tab{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid #eee;
+}
+.wrap .live_tab .item{
+	flex: 1;
+	text-align: center;
+	line-height: 50px;
+}
+.wrap .live_tab .active{
+	border-bottom: 2px solid #bd8a44;
+}
+/* 内容区域 */
+.wrap .content{
+	width: 100%;
+	height: 0;
+	position: relative;
+}
+.wrap .content_box{
+	width: 300%;
+	background-color: #F4F4F4;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.wrap .content .chat_area{
+	position: relative;
+	font-size: 14px;
+}
+.wrap .content .chat_area .chat{
+	overflow: hidden;
+	overflow-y: scroll;
+	padding:5px 10px 10px 10px; 
+}
+.wrap .content .chat_area .chat_tip{
+	background-color: #E3E3E3;
+	margin: 5px 10px 8px 10px;
+	padding: 5px;
+	border-radius: 5px;
+	white-space: normal;
+}
+.wrap .content .chat_area span{
+	color: #999;
+}
+.wrap .content .chat_area p{
+	margin-bottom: 12px; 
+}
+/* 聊天输入框 */
+.wrap .content .chat_banner{
+	display: none;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: white;
+	text-align: center;
+}
+.wrap .content .chat_banner .submitText{
+	border: 1px solid #ddd;
+	height: 30px;
+	margin: 4px 0;
+	width: 80%;
+	padding-left: 10px;
+	border-radius: 15px;
+	outline: none;
+}
+.wrap .content .content_box>div{
+	width: calc(100%/3);
+	float: left;
+}
+/* 主播信息 */
+.wrap .content .presenter{
+   padding:10px 0px;
+   font-size: 14px;
+}
+.wrap .content .presenter p{
+	padding:0 10px;
+	margin-bottom: 12px; 
+}
+.wrap .content .presenter span{
+	color: #999;
+}
+/* 直播信息 */
+.wrap .content .summary_box>div{
+	padding:10px;
+	font-size: 14px;
+	word-wrap:break-word
+}
+.wrap .content .summary_box span{
+	display: inline-block;
+	color: #999;
+	margin-bottom: 10px;
+	word-wrap:break-word
+}
+.wrap .content .summary_box .summary_area{
+	border: 1px solid #E3E3E3;
+	border-radius: 5px;
+	padding: 10px;
+}
+.wrap .content .submitBtn{
+	display: inline-block;
+	position: absolute;
+	right: 15%;
+	top: 50%;
+	margin-top: -8px;
+	color: #797481;
+	font-size: 16px;
+}
