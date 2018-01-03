@@ -1,9 +1,26 @@
+<?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wx58f12dc9c0f369d3", "6b34898518226d6ec6eb0e3f5eaac8ce");
+$signPackage = $jssdk->GetSignPackage();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+    <Connector  maxPostSize="0"/>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>视频</title>
+	<title>我才是最惨员工！凌晨还被美女老板要求……</title>
+	<meta name="description" content="这天凌晨，我正在家里赶一篇企业宣传稿，美女老板发来微信......">
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?04594defe005fc4d650e2d3004df3031";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 	<style>
 	html,body {
 		padding: 0;
@@ -15,23 +32,152 @@
 		overflow: hidden;
 	}
 
-	.videobox {
+	#videobox {
 		width: 100%;
 		height: 100%;
+    /*display: none;*/
 		position: absolute;
 		left: 0;
 		top: 0;
 		overflow: hidden;
 	}
 
-	video {width: 100%;height:100%;display: blcok;}
+	video {
+    width: 0;
+    height:0;
+    object-fit:fill;
+    display:none;  
+  }
+
 </style>
 </head>
 <body>
-	<div class="videobox">
-		<video id="mainvideo" autoplay loop webkit-playsinline="true">
-			<source src="http://7xvl2z.com1.z0.glb.clouddn.com/nigg2.mp4" type="video/mp4">
-		</video>
-	</div>
-</body>
+	<img src="http://www.cio.com.cn/source/video/img01.jpg" alt="" style="width:0;height:0;">
+	<div id="videobox">
+		<!-- <video id="mainvideo" src="http://www.cio.com.cn/source/video/video.mp4" preload="auto" autoplay="autoplay"   >
+			</video> -->
+      <video id="mainvideo" src="http://www.cio.com.cn/source/video/video.mp4" autoplay="autoplay" x5-playsinline playsinline webkit-playsinline></video>
+      <!-- <canvas id='myCanvas' ></canvas>  -->
+		</div>
+	</body>
 </html>
+  <!-- 微信分享 -->
+  <!-- 微信接口调用 -->
+  <script type="text/javascript">
+
+    document.getElementById("mainvideo").play(); 
+    document.addEventListener('WeixinJSBridgeReady',function(){  
+    document.getElementById("mainvideo").play();  
+     },false); 
+
+    //处理兼容 判断移动端系统iOS／Android
+    var userOS = window.navigator.userAgent;
+    var patt = /Android/i;
+    if(patt.test(userOS)){
+      var myVideo = document.getElementById("mainvideo");
+      myVideo.style.width = "100%";
+      myVideo.style.height = "100%";
+      // myVideo.style.objectFit = "fill";
+      myVideo.style.display = "block";
+      myVideo.controls = "false";
+    }else{
+      var videoBox = document.getElementById("videobox");
+      var myVideo = document.getElementById("mainvideo");
+      myVideo.setAttribute("x5-video-player-type", "h5");
+      myVideo.setAttribute("x5-video-player-fullscreen", "true");
+      var cas = document.createElement("CANVAS");
+      cas.id="myCanvas";
+      videoBox.appendChild(cas);
+      var videoO = document.getElementById("mainvideo");  
+      //获取画布  
+      var canvasO = document.getElementById("myCanvas");   
+      //设置画布  
+      var canvasO2D = canvasO.getContext('2d');  
+      //设置setInterval定时器  
+      var timer = null;  
+      //手机屏幕宽高
+      var height = window.screen.height;
+      var width = window.screen.width;
+          canvasO.width=width;
+          canvasO.height=height;
+      //监听播放  
+      videoO.addEventListener('play',function(){  
+         timer = setInterval(function(){  
+               canvasO2D.drawImage(videoO,0,0,width,height);  
+         },1);  
+      },false);  
+      //监听暂停  
+      videoO.addEventListener('pause',function(){  
+        clearInterval(timer);  
+      },false);  
+      //监听结束  
+      videoO.addEventListener('ended',function(){  
+         clearInterval(timer);  
+      },false);
+    }
+     
+  
+
+
+    // 微信接口配置、调用 
+    wx.config({
+      debug: false,
+      appId: '<?php echo $signPackage["appId"];?>',
+      timestamp: '<?php echo $signPackage["timestamp"];?>',
+      nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+      signature: '<?php echo $signPackage["signature"];?>',
+      jsApiList: [
+             // 所有要调用的 API 都要加到这个列表中
+             'onMenuShareTimeline',
+             'onMenuShareAppMessage',
+             'onMenuShareQQ'
+             ]
+         });
+      // 接口验证
+      wx.ready(function() {
+
+        wx.checkJsApi({
+          jsApiList: [
+          'getLocation',
+          'chooseImage',
+          'uploadImage',
+          ],
+          success: function (res) {
+                // alert(JSON.stringify(res));
+                // alert(JSON.stringify(res.checkResult.getLocation));
+                if (res.checkResult.getLocation == false) {
+                  alert('你的微信版本太低，不支持微信JS接口，请升级到最新的微信版本！');
+                  return;
+                }
+                if (res.checkResult.chooseImage == false) {
+                  alert('你的微信版本太低，不支持微信JS接口，请升级到最新的微信版本！');
+                  return;
+                }
+            }
+        });
+      //分享给好友
+      wx.onMenuShareAppMessage({
+        title: '我才是最惨员工！凌晨还被美女老板要求……',
+        desc: '这天凌晨，我正在家里赶一篇企业宣传稿，美女老板发来微信......',
+        link: 'http://www.cio.com.cn/ciovideo2017_wx_01',
+        imgUrl: 'http://www.cio.com.cn/source/video/img01.jpg',
+        type: 'video',
+        dataUrl:'http://www.cio.com.cn/ciovideo2017_wx_01'
+      });
+
+    //分享到朋友圈
+    wx.onMenuShareTimeline({
+      title: '我才是最惨员工！凌晨还被美女老板要求……',
+      desc: '这天凌晨，我正在家里赶一篇企业宣传稿，美女老板发来微信......',
+      link: 'http://www.cio.com.cn/ciovideo2017_wx_01',
+      imgUrl: 'http://www.cio.com.cn/source/video/img01.jpg'
+    });
+    //分享到QQ
+    wx.onMenuShareQQ({
+      title: '我才是最惨员工！凌晨还被美女老板要求……',
+      desc: '这天凌晨，我正在家里赶一篇企业宣传稿，美女老板发来微信......',
+      link: 'http://www.cio.com.cn/ciovideo2017_wx_01',
+      imgUrl: 'http://www.cio.com.cn/source/video/img01.jpg'
+    });
+});
+</script>

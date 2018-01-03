@@ -38,22 +38,55 @@ header{
 .wrap{
 	min-height: auto;
 }
+/* 视频区域 */
 .wrap .live_wrap {
 	width: 100%;
 	height: 200px;
 	background-color: grey;
+	position: relative;
 }
+.wrap .live_wrap .hot{
+	height: 20px;
+	background-color: rgba(0, 0, 0, .3);
+	position: absolute;
+	bottom: 8px;
+	left: 8px;
+	padding: 0 5px 0 15px;
+	font-size: 12px;
+}
+.wrap .live_wrap .hot span{
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	line-height: 24px;
+	color: #999;
+}
+.wrap .live_wrap .hot i{
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: -12px;
+	background: url("./info-icon-hot.png") center/contain no-repeat;
+    margin-top:-6px; 
+    vertical-align: bottom;
+}
+/* 导航栏 */
 .wrap .live_tab{
 	width: 100%;
 	display: flex;
+	display: -webkit-flex;
 	justify-content: center;
 	align-items: center;
 	border-bottom: 1px solid #eee;
 }
 .wrap .live_tab .item{
 	flex: 1;
+	－webkit-flex: 1;
+	－ms-flex: 1;
 	text-align: center;
-	line-height: 50px;
+	line-height: 40px;
 }
 .wrap .live_tab .active{
 	border-bottom: 2px solid #bd8a44;
@@ -118,8 +151,8 @@ header{
 }
 /* 主播信息 */
 .wrap .content .presenter{
-   padding:10px 0px;
-   font-size: 14px;
+	padding:10px 0px;
+	font-size: 14px;
 }
 .wrap .content .presenter p{
 	padding:0 10px;

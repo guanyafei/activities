@@ -1,0 +1,167 @@
+<!-- <?php
+require_once "jssdk.php";
+$jssdk = new JSSDK("wx58f12dc9c0f369d3", "6b34898518226d6ec6eb0e3f5eaac8ce");
+$signPackage = $jssdk->GetSignPackage();
+?> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>2017年度中国优秀CIO评选</title>
+	<meta name="description" content="2017年度中国优秀CIO评选">
+	<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+	<style>
+	html,body{
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	#box{
+		text-align: center;
+		
+	}
+	#box img{
+		width: 100%;
+		max-width: 750px;
+		vertical-align: middle;
+	}
+	#box #content video{
+		width: 0;
+		height:0;
+		/*object-fit:fill;*/
+		display:none;  
+	}
+	#box #content {
+		width: 100%;
+	}
+	.header{
+		height: 0;
+	}
+</style>
+</head>
+<body>
+	<div id="box">
+		<div id="header">
+			<img src="./source/header2.jpg" alt="2017年度中国优秀CIO评选">
+		</div>
+		<div id="content"><video id="mainvideo" src="./source/lf001.mp4" autoplay="autoplay" x5-playsinline playsinline -webkit-playsinline></video></div>
+		<div id="footer">
+			<img src="./source/footer.jpg" alt="2017年度中国优秀CIO评选">
+		</div>
+	</div>
+</body>
+
+</html>
+<!-- 微信分享 -->
+<!-- 微信接口调用 -->
+<script type="text/javascript">
+
+	document.getElementById("mainvideo").play(); 
+	document.addEventListener('WeixinJSBridgeReady',function(){  
+		document.getElementById("mainvideo").play();  
+	},false); 
+	 //处理兼容 判断移动端系统iOS／Android
+	 var userOS = window.navigator.userAgent;
+	 var patt = /Android/i;
+	 if(patt.test(userOS)){
+	 	var videoBox = document.getElementById("content");
+	 	var myVideo = document.getElementById("mainvideo");
+	 	myVideo.style.width = "100%";
+	 	myVideo.style.height = "280px";
+	 	myVideo.style.display = "block";
+	 	myVideo.controls = "false";
+	 }else{
+	 	var myVideo = document.getElementById("mainvideo");
+	 	var videoBox = document.getElementById("content");
+	 	videoBox.style.height = "280px";
+	 	myVideo.setAttribute("x5-video-player-type", "h5");
+	 	myVideo.setAttribute("x5-video-player-fullscreen", "true");
+	 	var cas = document.createElement("CANVAS");
+	 	cas.id = "myCanvas";
+	 	videoBox.appendChild(cas);
+	 	var casDom = document.getElementById("myCanvas");
+	 	var cas2D = casDom.getContext('2d');
+	 	var timer = null;
+	 	var height = 280;
+	 	var width = window.screen.width;
+	 	casDom.width = width;
+	 	casDom.height = 280;
+	 	myVideo.addEventListener('play',function(){
+	 		timer = setInterval(function(){
+	 			cas2D.drawImage(myVideo,0,0,width,height);
+	 		},1);
+	 	},false);
+	 	myVideo.addEventListener('pause',function(){
+	 		clearInterval(timer);
+	 	},false);
+	 	myVideo.addEventListener('ended',function(){
+	 		clearInterval(timer);
+	 	},false);
+	 }
+
+	  // 微信接口配置、调用 
+	  wx.config({
+	  	debug: false,
+	  	appId: '<?php echo $signPackage["appId"];?>',
+	  	timestamp: '<?php echo $signPackage["timestamp"];?>',
+	  	nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+	  	signature: '<?php echo $signPackage["signature"];?>',
+	  	jsApiList: [
+             // 所有要调用的 API 都要加到这个列表中
+             'onMenuShareTimeline',
+             'onMenuShareAppMessage',
+             'onMenuShareQQ'
+             ]
+         });
+      // 接口验证
+      wx.ready(function() {
+
+      	wx.checkJsApi({
+      		jsApiList: [
+      		'getLocation',
+      		'chooseImage',
+      		'uploadImage',
+      		],
+      		success: function (res) {
+                if (res.checkResult.getLocation == false) {
+                	alert('你的微信版本太低，不支持微信JS接口，请升级到最新的微信版本！');
+                	return;
+                }
+                if (res.checkResult.chooseImage == false) {
+                	alert('你的微信版本太低，不支持微信JS接口，请升级到最新的微信版本！');
+                	return;
+                }
+            }
+        });
+      //分享给好友
+      wx.onMenuShareAppMessage({
+      	title: '2017年度中国优秀CIO评选',
+      	desc: '2017年度中国优秀CIO评选',
+      	link: 'http://www.cio.com.cn/ciovideo2017_wx_01',
+      	imgUrl: 'http://www.cio.com.cn/source/video/header2.jpg',
+      	type: 'video',
+      	dataUrl:'http://www.cio.com.cn/ciovideo2017_wx_01'
+      });
+
+    //分享到朋友圈
+    wx.onMenuShareTimeline({
+    	title: '2017年度中国优秀CIO评选',
+    	desc: '2017年度中国优秀CIO评选',
+    	link: 'http://www.cio.com.cn/ciovideo2017_wx_01',
+    	imgUrl: 'http://www.cio.com.cn/source/video/header2.jpg'
+    });
+    //分享到QQ
+    wx.onMenuShareQQ({
+    	title: '2017年度中国优秀CIO评选',
+    	desc: '2017年度中国优秀CIO评选',
+    	link: 'http://www.cio.com.cn/ciovideo2017_wx_01',
+    	imgUrl: 'http://www.cio.com.cn/source/video/header2.jpg'
+    });
+});
+</script>
+
+
+
+
+
